@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Descripcion from './components/Descripcion';
 
 function App() {
+
+  const name = "Martín"
+  const lastname = "Perez"
+
   return (
     <div className="App">
-      <h2></h2>
-      <ul>
-        <li></li>
-      </ul>
+     <h1>Hola, {name}</h1>
+     <Descripcion name={name} lastname={lastname}/>
     </div>
   );
 }
