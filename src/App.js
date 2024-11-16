@@ -43,7 +43,7 @@ const handleClick = () => {
     <div className="App">
      <h1>Hola, {name}</h1>
      <Descripcion name={name} lastname={lastname}/>
-     {/* <ListaPersonas lista={lista}/> */}
+     <ListaPersonas lista={lista}/>
      <button onClick={handleClick}>CLICK ME!</button>
     </div>
   );

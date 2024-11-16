@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./Boton.module.css";
 
 function Boton (props) {
 
@@ -7,7 +8,7 @@ function Boton (props) {
     }
 
     return (
-        <button onClick={handleClick}>Más sobre {props.name}</button>
+        <button className={style.botonpersonalizado} onClick={handleClick}>{props.texto}</button>
     )
 
 }

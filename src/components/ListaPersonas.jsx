@@ -1,13 +1,14 @@
 import React from "react";
 import TarjetaPersona from "./TarjetaPersona";
+import { CardGroup } from "react-bootstrap";
 
 const ListaPersonas = ( {lista} ) => {
     return (
-        <div>
+        <CardGroup>
             {lista.map ((p, index) =>
             <TarjetaPersona name={p.name} lastname={p.lastname} mail={p.mail} phone={p.phone} key={index}/>
             )}      
-        </div>
+        </CardGroup>
     )
 }
 

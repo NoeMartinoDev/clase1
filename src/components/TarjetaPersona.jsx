@@ -1,15 +1,22 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
+
+const titulo = {
+    color: "blue",
+    backgroundColor: "gray",
+    borderRadius: "5px"
+}
 
 const TarjetaPersona = ( {name, lastname, mail, phone} ) => {
 
     return (
-        <div>
-            <h2>Nombre: {name}</h2>
-            <h2>Apellido: {lastname}</h2>
-            <p>Correo electrónico: {mail}</p>
-            <p>Teléfono: {phone}</p>
+        <Card>
+            <Card.Title >Nombre: {name}</Card.Title>
+            <h2 style={titulo}>Apellido: {lastname}</h2>
+            <Card.Text>Correo electrónico: {mail}</Card.Text>
+            <Card.Text>Teléfono: {phone}</Card.Text>
             <hr/>
-        </div>
+        </Card>
         )
 }
 

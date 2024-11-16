@@ -1,0 +1,17 @@
+.botonpersonalizado {
+    border: 2px solid #3d723f;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    background-color: #4CAF50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.botonpersonalizado:hover {
+    background-color: #8ec590;
+}
