@@ -1,0 +1,23 @@
+.container {
+    background-color: darkgrey;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 200px;
+}
+
+.titulo {
+    color:brown;
+    font-size: 1rem;
+}
+
+.image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.texto {
+    color:darkslategrey;
+    font-size: 0.8rem;
+}

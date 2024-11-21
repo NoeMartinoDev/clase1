@@ -1,21 +1,40 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import Boton from "./Boton";
+
+//Estilo en línea o inline styling o style inline:
+//Definir un objeto JS y pasarlo al elemento a través del atributo style
 
 const titulo = {
-    color: "blue",
-    backgroundColor: "gray",
+    color: "crimson",
+    backgroundColor: "burlywood",
     borderRadius: "5px"
+}
+
+const cardStyle = {
+    width: "18rem",
+    margin: "5px",
+    height: "18rem",
+    borderRadius: "5px",
+    border: "1px solid gray"
 }
 
 const TarjetaPersona = ( {name, lastname, mail, phone} ) => {
 
+    const handleClick = () => {
+        alert("Este es el botón del componente TarjetaPersona")
+    }
+
     return (
-        <Card>
-            <Card.Title >Nombre: {name}</Card.Title>
+        <Card style={cardStyle}>
+            <Card.Title >Nombre:<br/>{name}</Card.Title>
             <h2 style={titulo}>Apellido: {lastname}</h2>
-            <Card.Text>Correo electrónico: {mail}</Card.Text>
-            <Card.Text>Teléfono: {phone}</Card.Text>
-            <hr/>
+            <Card.Text style={{fontSize: "13px"}}>
+                Correo electrónico: {mail}
+                <br/>
+                Teléfono: {phone}
+            </Card.Text>
+            <Boton texto={"Contactar a " + name} handleClick={handleClick}></Boton>
         </Card>
         )
 }

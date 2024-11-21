@@ -4,10 +4,14 @@ import style from "./Descripcion.module.css";
 
 function Descripcion ( {name, lastname} ) {
 
+    const handleClick = () => {
+        alert("Este es el botón del componente Descripción")
+    }
+
     return (
         <>
-            <p className={style.titulo}>Mi nombre es {name} {lastname} y soy desarrollador front-end</p>
-            <Boton texto={"Más sobre " + name}/>
+            <p className={style.parrafo}>Mi nombre es {name} {lastname} y soy desarrollador front-end</p>
+            <Boton texto={"Más sobre " + name} handleClick={handleClick}/>
         </>
     )
 

@@ -1,6 +1,8 @@
 import './App.css';
 import Descripcion from './components/Descripcion';
 import ListaPersonas from './components/ListaPersonas';
+import Boton from "./components/Boton";
+import CardCustomizada from './components/cardCustomizada/CardCustomizada';
 
 function App() {
 
@@ -36,7 +38,14 @@ function App() {
 ]
 
 const handleClick = () => {
-  alert ("Hiciste click en el botón")
+  alert ("Hiciste click en el botón del componente App")
+}
+
+const martin = {
+  name: "Martín Peréz",
+  image: "https://th.bing.com/th/id/OIP.E2lwe-_bLJWe3ohKGzh6sAHaHa?w=1200&h=1200&rs=1&pid=ImgDetMain",
+  altImage: "Foto de perfil del empleado Martín Pérez",
+  description: "Empleado hace 9 años"
 }
 
   return (
@@ -44,7 +53,8 @@ const handleClick = () => {
      <h1>Hola, {name}</h1>
      <Descripcion name={name} lastname={lastname}/>
      <ListaPersonas lista={lista}/>
-     <button onClick={handleClick}>CLICK ME!</button>
+     <Boton handleClick={handleClick} texto="CLICK ME!"></Boton>
+     <CardCustomizada obj={martin} styleCustomizado={{ backgroundColor: "lightgreen" }}/>
     </div>
   );
 }
